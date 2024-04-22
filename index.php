@@ -17,7 +17,6 @@
             <input type="password" placeholder="Password" name="password" required> 
             <input type="submit" value="Login" name="login" class="btnSend">
         </form>
-        <?php echo $error  ?>
     </div>
 
 </l>

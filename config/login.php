@@ -19,7 +19,6 @@ if (isset($_POST['login'])) {
         $password_bd = "";
         foreach ($result as $data) {
             $password_bd = $data['password'];
-            // echo $password_bd . "<br/>";<
         }
 
         if ($total == 0) {
@@ -27,8 +26,8 @@ if (isset($_POST['login'])) {
         } else {
             if ($password_bd == $password) {
                 $_SESSION['tuser'] = $data;
-                // header("location: admin/index.php");
-                echo "PAGE ADMINISTRATOR, MODIFER";
+                header("location: admin/index.php");
+                // echo "PAGE ADMINISTRATOR, MODIFER";
             } else {
                 $error = 'Mot de passe incorrect<br/>';
             }

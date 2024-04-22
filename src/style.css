@@ -25,3 +25,9 @@ h1 {
 .erreur {
     @apply text-red-700;
 }
+
+/* Fichier admin code source css */
+
+.navbar {
+    @apply bg-blue-950;
+}
