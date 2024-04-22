@@ -62,19 +62,19 @@
                                         $x++;
                                         echo '<tr>
                                             <td>
-                                                <a href="index.php?cible=edit&id=' . $data['id'] . '">
-                                                    <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" 
+                                                <a href="index.php?cible=edit&id='  . '">
+                                                    <button class="btn btn-success btn-sm rounded-0 bg-green-700" type="button" data-toggle="tooltip" data-placement="top" 
                                                     title="" data-original-title="Edit"><i class="fa fa-edit"></i></button>
                                                 </a> 
-                                                <a href="index.php?cible=delete&id=' . $data['id'] . '"  onclick="return confirm(\'Are you sure you want to delete this item\')">
-                                                    <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash"></i></button>
+                                                <a href="index.php?cible=delete&id=' . '"  onclick="return confirm(\'Are you sure you want to delete this item\')">
+                                                    <button class="btn btn-danger btn-sm rounded-0 bg-red-700" type="button" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash"></i></button>
                                                 </a>
                                             </td>
                                             <td>
                                                 <img src="./../img/' . $data['photo'] . '" style="width:40px;height:40px;border-radius: 10px 5%;">
                                             </td>
                                             <td>' . $data['email'] . '</td>
-                                            <td>' . $data['pwd'] . '</td>
+                                            <td>' . $data['password'] . '</td>
                                         
                                         </tr>';
                                     }

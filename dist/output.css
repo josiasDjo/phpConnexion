@@ -655,6 +655,13 @@ h1 {
 
 /* Fichier admin code source css */
 
+h3 {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
 .sub_container_admin {
   display: flex;
   width: 100%;
@@ -763,4 +770,9 @@ td, th {
   border-width: 2px;
   border-style: solid;
   padding: 0.75rem;
+}
+
+#deletebtn {
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
 }
