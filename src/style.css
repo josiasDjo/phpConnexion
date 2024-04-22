@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+}
+.container {
+    width: 80%;
+    height: 400px;
+    border: 2px solid black;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+    border-radius: 20px;
+}
+.part1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.part2 {
+    display:flex;
+    flex-direction: row;
+    padding: 30px;
+    width: 50%;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.part2 form {
+    display: flex;
+    flex-direction: column;
+}
+.part2 form input {
+    margin: 20px;
+    border-radius: 5px;
+    padding: 3px;
+}
+h1 {
+    font-family: sans-serif;
+    font-weight: bold;
+}
+p {
+    font-family: sans-serif;
+}

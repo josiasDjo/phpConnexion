@@ -12,4 +12,5 @@
         echo "Connexion error " . $e->getMessage();
    }
 
+   $conn = null;
 ?>
