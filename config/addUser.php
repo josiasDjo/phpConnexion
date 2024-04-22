@@ -22,10 +22,14 @@ if (isset($_POST['ajouter'])) {
         $email         = strip_tags($_POST['email']);
         $password     = strip_tags($_POST['password']);
 
-        $sql = $bdd -> prepare("INSERT INTO tuser (email, password, photo) VALUES (?, ?, ?)");
-        $sql->execute(array($email, md5($password), $photo_name));
-
-        $error = $e->getMessage();
+        try {
+            $sql = $bdd -> prepare("INSERT INTO tuser (email, password, photo) VALUES (?, ?, ?)");
+            $sql->execute(array($email, md5($password), $photo_name));
+        }
+        catch (Exception $e) {
+            $error = $e->getMessage();
+            echo 'Une erreur est survenue : ' . $error;
+        }
         header("location: index.php?cible=addUser");
         //echo'<script type="text/javascript"> window.location.rel="noopener" href = \'index.php\';</script>';
     }

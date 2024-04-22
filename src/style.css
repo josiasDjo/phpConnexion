@@ -35,7 +35,7 @@ h3 {
     @apply w-full flex flex-row;
 } 
 .navbar_admin {
-    @apply bg-blue-950 w-3/12 h-screen text-white p-10 opacity-90;
+    @apply bg-blue-950 w-3/12 h-screen text-white p-10 opacity-90 fixed left-0 top-0;
 }
 .navbar_admin li {
     @apply mt-12 border-2 border-solid border-blue-950 p-4 bg-blue-800 bg-opacity-30 rounded-lg;

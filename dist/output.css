@@ -669,6 +669,9 @@ h3 {
 }
 
 .navbar_admin {
+  position: fixed;
+  left: 0px;
+  top: 0px;
   height: 100vh;
   width: 25%;
   --tw-bg-opacity: 1;
