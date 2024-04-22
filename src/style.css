@@ -4,7 +4,7 @@
 
 
 body {
-    @apply justify-center items-center self-center mt-24;
+    @apply justify-center items-center self-center;
 }
 .container {
     @apply border-2 border-solid border-green-300 justify-center items-center text-center
@@ -13,7 +13,7 @@ body {
 .container form {
     @apply flex flex-col justify-center items-center;
 }
-input {
+.container form input {
     @apply border-solid border-2 border-green-700 m-5 pl-3 pr-3 pt-1 pb-1 rounded-md w-56;
 }
 .btnSend {
@@ -28,6 +28,46 @@ h1 {
 
 /* Fichier admin code source css */
 
-.navbar {
-    @apply bg-blue-950;
+.sub_container_admin {
+    @apply w-full flex flex-row;
+} 
+.navbar_admin {
+    @apply bg-blue-950 w-3/12 h-screen text-white p-10 opacity-90;
+}
+.navbar_admin li {
+    @apply mt-12 border-2 border-solid border-blue-950 p-4 bg-blue-800 bg-opacity-30 rounded-lg;
+}
+.navbar_admin i {
+    @apply pr-5;
+}
+.sub_container_admin {
+    @apply w-9/12 absolute right-0 top-0 m-auto justify-center items-center;
+}
+.espace_admin {
+    @apply w-9/12 p-5; 
+}
+.espace_admin input {
+    @apply mr-0 ml-0 m-5 pl-3 pr-3 pt-1 pb-1 rounded-md border-solid border-2 border-green-700;
+}
+.espace_admin .evoyer_req {
+    @apply border-l-transparent bg-green-700 w-3/12;
+}
+.espace_admin .recherche_pers {
+    @apply border-r-transparent w-8/12;
+}
+.addUser form input {
+    @apply border-2 border-solid border-blue-950 pl-3 pr-3 pt-1 pb-1 rounded-md w-full;
+}
+.addUser form label {
+    @apply font-sans font-semibold;
+}
+.addUser form .btn_envoyer_admin {
+    @apply border-green-700 bg-green-700;
+}
+
+table {
+    @apply border-collapse;
+}
+td, th {
+    @apply border-2 border-solid p-3;
 }
