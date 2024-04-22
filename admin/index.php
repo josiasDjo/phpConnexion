@@ -10,6 +10,7 @@
 <body>
     <?php 
         require_once ("../config/conbd.php"); 
+        require_once ("../config/addUser.php");
     ?>
 
 
@@ -78,7 +79,12 @@
                                         
                                         </tr>';
                                     }
+                                } 
+                                else{
+                                    echo'<tr><td colspan="4" style="color:red;">Aucun element!</td></tr>';	
                                 }
+                            
+                            
                             ?>
                         </tr>
                     </tbody>
