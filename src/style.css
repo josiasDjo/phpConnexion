@@ -2,55 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    display: flex;
+    @apply justify-center items-center self-center mt-24;
 }
 .container {
-    width: 80%;
-    height: 400px;
-    border: 2px solid black;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    margin: 30px;
-    border-radius: 20px;
+    @apply border-2 border-solid border-green-300 justify-center items-center text-center
+    w-3/6 h-80 m-auto self-center rounded-xl bg-green-300;
 }
-.part1 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    padding: 30px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.container form {
+    @apply flex flex-col justify-center items-center;
 }
-.part2 {
-    display:flex;
-    flex-direction: row;
-    padding: 30px;
-    width: 50%;
-    background-color: black;
-    justify-content: center;
-    align-items: center;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+input {
+    @apply border-solid border-2 border-green-700 m-5 pl-3 pr-3 pt-1 pb-1 rounded-md w-56;
 }
-.part2 form {
-    display: flex;
-    flex-direction: column;
-}
-.part2 form input {
-    margin: 20px;
-    border-radius: 5px;
-    padding: 3px;
+.btnSend {
+    @apply w-56 bg-green-950 text-white;
 }
 h1 {
-    font-family: sans-serif;
-    font-weight: bold;
+    @apply font-sans font-bold text-2xl pt-6;
 }
-p {
-    font-family: sans-serif;
+.erreur {
+    @apply text-red-700;
 }

@@ -11,5 +11,5 @@
 	    echo "Connection error :" . $exception->getMessage();
     }
 
-    $bdd = null;
+    // $bdd = null;
 ?>

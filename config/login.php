@@ -3,7 +3,7 @@ ob_start();
 session_start();
 ?>
 <?php
-require_once ("../index.php");
+// require_once ("../index.php");
 if (isset($_POST['login'])) {
     $error = '';
     if (empty($_POST['email']) || empty($_POST['password'])) {
@@ -19,7 +19,7 @@ if (isset($_POST['login'])) {
         $password_bd = "";
         foreach ($result as $data) {
             $password_bd = $data['password'];
-            echo $password_bd . "<br/>";
+            // echo $password_bd . "<br/>";<
         }
 
         if ($total == 0) {
@@ -31,7 +31,6 @@ if (isset($_POST['login'])) {
                 echo "PAGE ADMINISTRATOR, MODIFER";
             } else {
                 $error = 'Mot de passe incorrect<br/>';
-                echo $error;
             }
         }
     }
