@@ -15,12 +15,12 @@
 
 
     <div class="container-admin">
-        <div class="navbar_admin">
+        <!-- <div class="navbar_admin">
             <ul>
                 <li><i class="fa-solid fa-briefcase"></i> Workspace</li>
                 <li> <i class="fa-solid fa-plus"></i> Ajouter Utilisateur</li>
             </ul>
-        </div>
+        </div> -->
 
         <div class="sub_container_admin">
             <div class="espace_admin">
