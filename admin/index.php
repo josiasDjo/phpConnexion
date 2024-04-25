@@ -11,20 +11,17 @@
     <?php 
         require_once ("../config/conbd.php"); 
         require_once ("../config/addUser.php");
+        require_once ("../config/edit.php");
+        require_once ("../admin/checklog.php");
     ?>
 
 
     <div class="container-admin">
-        <!-- <div class="navbar_admin">
-            <ul>
-                <li><i class="fa-solid fa-briefcase"></i> Workspace</li>
-                <li> <i class="fa-solid fa-plus"></i> Ajouter Utilisateur</li>
-            </ul>
-        </div> -->
+        <?php require_once ("headerAdmin.php");  ?>
 
         <div class="sub_container_admin">
             <div class="espace_admin">
-                <h3>Ajout Utilisateur </h3>
+                <h3>Ajout Utilisateurs </h3>
                 <div class="search_opt">
                     <input type="search" <input type="submit" class="recherche_pers">
                     <input type="submit" value="Rechercher" name="rechercher" class="evoyer_req">
@@ -36,7 +33,7 @@
                         <label for="password">Password</label>
                         <input type="password" name="password" id="" placeholder="Entrer votre mot de passe">
                         <label for="image">Avatar</label>
-                        <input type="file" name="image" id="">
+                        <input type="file" name="image" id="image">
                         <input type="submit" value="Ajouter" name="ajouter" class="btn_envoyer_admin">
                     </form>
                 </div>
@@ -63,11 +60,11 @@
                                         $x++;
                                         echo '<tr>
                                             <td>
-                                                <a href="index.php?cible=edit&id='  . '">
+                                                <a href="config/edit.php'  .$data['idUser'] . '">
                                                     <button class="btn btn-success btn-sm rounded-0 bg-green-700" type="button" data-toggle="tooltip" data-placement="top" 
                                                     title="" data-original-title="Edit"><i class="fa fa-edit"></i></button>
                                                 </a> 
-                                                <a href="index.php?cible=delete&id=' . '"  onclick="return confirm(\'Are you sure you want to delete this item\')">
+                                                <a href="index.php?cible=delete&id=' .$data['idUser'] . '"  onclick="return confirm(\'Are you sure you want to delete this item\')">
                                                     <button class="btn btn-danger btn-sm rounded-0 bg-red-700" type="button" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash"></i></button>
                                                 </a>
                                             </td>

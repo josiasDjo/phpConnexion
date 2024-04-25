@@ -29,7 +29,7 @@ h1 {
 /* Fichier admin code source css */
 
 h3 {
-    @apply font-sans font-bold text-2xl;
+    @apply font-sans font-bold text-2xl text-black;
 }
 .sub_container_admin {
     @apply w-full flex flex-row;

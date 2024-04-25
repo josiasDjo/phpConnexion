@@ -5,9 +5,10 @@ if (isset($_POST['ajouter'])) {
     if (empty($_POST['email']) || empty($_POST['password'])) {
         $error = 'Entrez Email & Password svp';
     } else {
-        $photo = $_FILES['image']['name'];
-        $photo_tmp = $_FILES['image']['tmp_name'];
+
         if ($photo != '') {
+            $photo = $_FILES['image']['name'];
+            $photo_tmp = $_FILES['image']['tmp_name'];
             if (isset($_FILES['image']['name'])) {
                 $ext = pathinfo($photo, PATHINFO_EXTENSION);
                 $file_name = basename($photo, '.' . $ext);
@@ -23,7 +24,7 @@ if (isset($_POST['ajouter'])) {
             $photo_name = 'avatar.png';
         }
         $email         = strip_tags($_POST['email']);
-        $password     = strip_tags($_POST['password']);
+        $password     = password_hash(strip_tags($_POST['password']), PASSWORD_DEFAULT);
 
         try {
             $sql = $bdd -> prepare("INSERT INTO tuser (email, password, photo) VALUES (?, ?, ?)");
