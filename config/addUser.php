@@ -23,12 +23,12 @@ if (isset($_POST['ajouter'])) {
         } else {
             $photo_name = 'avatar.png';
         }
-        $email         = strip_tags($_POST['email']);
-        $password     = password_hash(strip_tags($_POST['password']), PASSWORD_DEFAULT);
+        $email         = ($_POST['email']);
+        $password     = password_hash(($_POST['password']), PASSWORD_DEFAULT);
 
         try {
             $sql = $bdd -> prepare("INSERT INTO tuser (email, password, photo) VALUES (?, ?, ?)");
-            $sql->execute(array($email, md5($password), $photo_name));
+            $sql->execute(array($email, $password, $photo_name));
         }
         catch (Exception $e) {
             $error = $e->getMessage();

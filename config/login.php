@@ -9,8 +9,8 @@ if (isset($_POST['login'])) {
     if (empty($_POST['email']) || empty($_POST['password'])) {
         $error = 'Email & Password';
     } else {
-        $email = strip_tags($_POST['email']);
-        $password = password_hash(strip_tags($_POST['password']), PASSWORD_DEFAULT);
+        $email = ($_POST['email']);
+        $password = ($_POST['password']);
         $sql = $bdd->prepare("SELECT * FROM tuser WHERE email=?");
         $sql->execute(array($email));
         $total = $sql->rowCount();
@@ -26,13 +26,14 @@ if (isset($_POST['login'])) {
             $error = 'Valeurs de connexion incorrectes<br/>';
         } else {
             if (password_verify($password, $password_bd)) {
-                echo "psw Utilisateur : " . $password . "<br/>" . "Pwd_bd : " . $password_bd . "<br/>";
+            // if ($password == $password_bd) {  
+                // echo "psw Utilisateur : " . $password . "<br/>" . "Pwd_bd : " . $password_bd . "<br/>";
                 $_SESSION['tuser'] = $data;
                 header("location: admin/index.php");
                 // echo "PAGE ADMINISTRATOR, MODIFER";
             } else {
                 $error = 'Mot de passe incorrect<br/>';
-                echo "psw Utilisateur : " . $password . "<br/>" . "Pwd_bd : " . $password_bd . "<br/>";
+                // echo "psw Utilisateur : " . $password . "<br/>" . "Pwd_bd : " . $password_bd . "<br/>";
                 echo "$error";
             }
         }
