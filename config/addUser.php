@@ -7,8 +7,11 @@ if (isset($_POST['ajouter'])) {
     } else {
 
         if ($photo != '') {
+            $target_directory = "uploads";
             $photo = $_FILES['image']['name'];
-            $photo_tmp = $_FILES['image']['tmp_name'];
+            $photo_base = $_FILES['image']['tmp_name'];
+            $photo_data = file_get_contents($photo_base);
+            $photo_tmp = base64_encode($photo_data);
             if (isset($_FILES['image']['name'])) {
                 $ext = pathinfo($photo, PATHINFO_EXTENSION);
                 $file_name = basename($photo, '.' . $ext);
